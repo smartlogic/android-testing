@@ -14,7 +14,6 @@ import org.robolectric.shadows.ShadowActivity;
 import org.robolectric.shadows.ShadowIntent;
 import org.robolectric.tester.android.view.TestMenuItem;
 
-
 import static org.fest.assertions.api.ANDROID.assertThat;
 import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.MatcherAssert.assertThat;
@@ -49,7 +48,8 @@ public class MainActivityTest {
         assertThat(button).containsText("Hello");
     }
 
-    @Test @Config(qualifiers = "de")
+    @Test
+    @Config(qualifiers = "de")
     public void germanLanguage() {
         assertThat(button).containsText("Hallo");
     }
@@ -69,7 +69,7 @@ public class MainActivityTest {
         Intent startedIntent = shadowActivity.getNextStartedActivity();
         ShadowIntent shadowIntent = Robolectric.shadowOf(startedIntent);
 
-        assertThat(shadowIntent.getComponent().getClassName(), equalTo(AnotherActivity.class.getName()));
+        assertThat(shadowIntent.getComponent().getClassName(), equalTo(PlanetsActivity.class.getName()));
     }
 
     @Test
@@ -82,6 +82,6 @@ public class MainActivityTest {
         Intent startedIntent = shadowActivity.getNextStartedActivity();
         ShadowIntent shadowIntent = Robolectric.shadowOf(startedIntent);
 
-        assertThat(shadowIntent.getComponent().getClassName(), equalTo(AnotherActivity.class.getName()));
+        assertThat(shadowIntent.getComponent().getClassName(), equalTo(PlanetsActivity.class.getName()));
     }
 }

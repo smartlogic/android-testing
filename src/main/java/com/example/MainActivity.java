@@ -47,7 +47,7 @@ public class MainActivity extends Activity {
     }
 
     private void launchNextActivity() {
-        Intent intent = new Intent(MainActivity.this, AnotherActivity.class);
+        Intent intent = new Intent(MainActivity.this, PlanetsActivity.class);
         startActivity(intent);
     }
 }

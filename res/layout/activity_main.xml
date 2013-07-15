@@ -25,4 +25,5 @@
         android:id="@+id/text_view"
         android:textSize="40sp"
         android:text="Hello world!" />
+
 </LinearLayout>
